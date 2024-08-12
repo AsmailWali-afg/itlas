@@ -1,0 +1,119 @@
+/* Form.module.css */
+.form-container {
+
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    background-color: #d289df;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+  .form-group button {
+    padding: 10px 20px;
+    background-color: #960fb8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .form-group button:hover {
+    background-color: #520a64;
+  }
+
+
+  form{
+    margin-top: 1rem;
+    font-size: 1.7rem;
+  }
+
+
+
+  .ragisterHeader{
+    font-size: 3rem;
+    text-align: center;
+  }
+
+
+  .formMaincontainer{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      margin-top: 5rem;
+   
+
+  }
+
+  .formPic{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  @media only screen and (max-width:768px) {
+
+    html{
+        font-size:35% ;
+    }
+  
+      .formMaincontainer {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(1,1fr);
+        gap: 6rem;
+       
+    }
+    
+  
+  }
+
+
+
+
+
+
+
+
+
+  @media only screen and (max-width:320px) {
+    
+
+    .container{
+      width: 80rem;
+    }
+
+
+    .formPic{
+      width: 30rem;
+    }
+
+
+    .form-container{
+      width: 60rem;
+    }
+
+  }

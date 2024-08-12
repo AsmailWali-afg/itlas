@@ -1,0 +1,142 @@
+
+
+
+.card{
+    border: 2px solid rgb(0, 0, 0);
+    /* background: linear-gradient(45deg, #7e838c, #504f56); */
+    background: linear-gradient(45deg, #fa1500, #ff0177);
+    box-shadow: black 0px 0px 8px 3px;
+
+    border-radius: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+    justify-content: space-between;
+    & img{
+        border-radius: 50px;
+    }
+
+}
+
+.cardContainer{
+    width: 100rem;
+    margin:0 auto ;
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    margin-bottom: 10rem;
+}
+
+
+
+
+
+.Product{
+    display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #ff6f61, #de2d7f);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  &:hover {
+    background: linear-gradient(45deg,  #198013, #03db23);
+    transform: scale(1.05);
+  } 
+  
+    & a {
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    border-radius: 20px;
+}
+
+
+
+.serviceOrderBtn{
+    color: wheat;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+
+.adminBtn{
+    margin-top: 1rem;
+}
+
+
+
+@media only screen and (max-width:1200px) {
+    html{
+        font-size:55% ;
+    }
+
+  }
+  
+
+  @media only screen and (max-width:1024px) {
+
+    html{
+        font-size:38% ;
+    }
+ 
+    
+  }
+
+
+
+  @media only screen and (max-width:768px) {
+
+    html{
+        font-size:35% ;
+    }
+
+    .cardContainer{
+        grid-template-columns: repeat(2,1fr);
+    }
+  
+  }
+
+
+
+  @media only screen and (max-width:480px) {
+
+    html{
+        font-size:25% ;
+    }
+    .container{
+        width: 115rem;
+    }
+
+    .cardContainer{
+        grid-template-columns: repeat(1,1fr);
+        width: 60rem;
+    }
+
+  
+  }
+
+
+
+  @media only screen and (max-width:320px) {
+
+   
+    .container{
+        width: 70rem;
+    }
+
+    .cardContainer{
+        width: 70rem;
+        font-size: 3rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+  
+  }

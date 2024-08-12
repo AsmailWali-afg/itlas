@@ -1,0 +1,26 @@
+.singleProduct{
+    margin-top: 4rem;
+    height: 50rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .leftSingle{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-right:2rem ;
+        border: 0.4rem solid rgb(0, 0, 0);
+        background-color: rgb(199, 145, 145);
+        & .singleImages{
+            margin: 1rem;
+        }
+    }
+
+    & .rightSingle{
+        font-size: 2rem;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: wheat;
+        display: flex;
+        flex-direction: column;
+    }
+}
