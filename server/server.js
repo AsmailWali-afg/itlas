@@ -47,7 +47,7 @@ app.use('/api/admin',admin)
 
 
 app.get('/',(req,res)=>{
-    res.send('Home page')
+    res.status(200).send('Home page')
 })
 
 
