@@ -29,7 +29,7 @@ app.use('/upload/resize',express.static(path.join(__dirname, 'upload/resize')));
 
 
 const corseOptions={
-    origin:'http://localhost:5173',
+    origin:'https://itlas.vercel.app/',
     methods:'GET,POST,DELETE,PATCH,PUT,HEADT',
     Credential:true
 };
