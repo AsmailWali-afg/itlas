@@ -2,64 +2,77 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'; 
 import { Consumer } from '../context/authContext';
-
-
+import { useState } from 'react';
+import './hambarger.css'
 
 const Navbar = () => {
 
   const {isLogin}=Consumer()
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+
+
   return (
     <>
-<nav className="navbar container">
+
+
+
+  <nav className="navbar container">
 
       <div className="navbar-container">
         <NavLink to="/" className="navbar-logo">
           <img src="./file.png" alt="" style={{width:'5rem', height:'5rem'}} />
         </NavLink>
+
         <ul className="navbar-menu">
-          <li className="navbar-item">
+        <div className={`nav-links ${isOpen ? 'open' : ''}`}>
+
             <NavLink to="/" className="navbar-link">
               Home
             </NavLink>
-          </li>
          
-          <li className="navbar-item">
+       
             <NavLink to="/services" className="navbar-link">
               Services
             </NavLink>
-          </li>
-          <li className="navbar-item">
+        
             <NavLink to="/contact" className="navbar-link">
               Contact
             </NavLink>
-          </li>
 
         {
           isLogin ? 
-          <li className="navbar-item">
+          
           <NavLink to="/logout" className="navbar-link">
           Logout
           </NavLink>
-          </li> : 
+           : 
 
           
-        <> <li className="navbar-item">
+        <> 
         <NavLink to="/Ragister" className="navbar-link">
         Ragister
         </NavLink>
-        </li>
-        <li className="navbar-item">
+       
+       
         <NavLink to="/Login" className="navbar-link">
         Login
         </NavLink>
-        </li> 
+     
         </>
         }
+        </div>
        
 
         
-
+       <div className="hamburger" onClick={toggleMenu}>
+        &#9776;
+      </div>
         
         </ul>
       </div>

@@ -28,7 +28,9 @@ const StorageProvider=({children})=>{
 
 
     const loginUser=async()=>{
+        try {
 
+            
         setisLoading(true)
         const responce=await fetch(`${URL}/api/auth/user`,{
             headers:{
@@ -46,6 +48,11 @@ const StorageProvider=({children})=>{
             isLoading(false)
             console.log('Backend Error');
         }
+            
+        } catch (error) {
+            console.log(error);
+        }
+
     }
 
 
@@ -53,17 +60,25 @@ const StorageProvider=({children})=>{
 
 
     const serviceDeta=async()=>{
-        const responce=await fetch(`${URL}/api/auth/showImage`,{
-            method:'GET',
-            headers:{
-                'Content-Type':'application/json'
-            }
-        })
 
-        if (responce.ok) {
-            const serviceDeta=await responce.json();
-            setservice(serviceDeta.deta);
-        } 
+        try {
+
+            const responce=await fetch(`${URL}/api/auth/showImage`,{
+                method:'GET',
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            })
+    
+            if (responce.ok) {
+                const serviceDeta=await responce.json();
+                setservice(serviceDeta.deta);
+            } 
+            
+        } catch (error) {
+            console.log(error);
+        }
+      
     }
 
 

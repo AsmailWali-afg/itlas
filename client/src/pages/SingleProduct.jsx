@@ -19,8 +19,8 @@ const SingleProduct=()=>{
         });
         if (responce.ok) {
             const resDeta=await responce.json();
-            setproduct(resDeta.deta);
-            setimages(resDeta.deta.filepath)
+            // setproduct(resDeta.deta);
+            setimages(resDeta.deta.cloudLink)
         }
     }
 
@@ -50,9 +50,10 @@ const SingleProduct=()=>{
                 <div className="leftSingle">
                     {
                         images.map((deta,index)=>{
+
                             return(
                                 <div key={index} className="singleImages">
-                                <img src={`${URL}/${deta}`} style={{width:'15rem',height:'15rem'}} alt="" />
+                                <img src={`${deta}`} style={{width:'15rem',height:'15rem'}} alt="" />
                                 </div>
                             )
                         })

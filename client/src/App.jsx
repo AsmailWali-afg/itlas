@@ -33,12 +33,12 @@ function App() {
       <Route path='/services' element={<Service/>}/>
       <Route path='/logout' element={<Logout/>}/>
       <Route path='*' element={<Erorr/>}/>
-      <Route path='services/:id/order' element={<SingleProduct/>} />
+      <Route path='/services/:id/order' element={<SingleProduct/>} />
 
 
 
 
-      <Route path='admin' element={<Admin/>}>
+      <Route path='/admin' element={<Admin/>}>
 
       <Route path='user' element={<AdminUser/>}/>
       <Route path='contact' element={<AdminContact/>}/>
